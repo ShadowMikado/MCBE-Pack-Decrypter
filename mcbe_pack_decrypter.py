@@ -40,7 +40,6 @@ def decrypt_pack(decryption_key, zip_path):
 
                     for info_2 in contents.get("content", []):
                         if info_2["path"] == file_info.filename:
-                            print(info_2)
                             key = info_2.get("key", "").encode()
                             if key == b"":
                                 output_zip.writestr(file_info.filename, file_data)
