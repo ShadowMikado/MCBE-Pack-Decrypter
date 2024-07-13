@@ -5,3 +5,21 @@
 ![image](https://github.com/user-attachments/assets/6e7d7c33-0b4c-48a8-b782-0af8a8dc3f6c)
 
 I am in no way responsible for your actions
+
+## Install
+
+```
+pip install -r requirements.txt
+```
+
+## Start
+
+Windows: 
+```
+py ./mcbe_pack_decrypter.py
+```
+
+MacOS/Linux: 
+```
+python3 ./mcbe_pack_decrypter.py
+```
