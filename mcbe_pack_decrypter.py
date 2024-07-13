@@ -40,7 +40,11 @@ def decrypt_pack(decryption_key, zip_path):
 
                     for info_2 in contents.get("content", []):
                         if info_2["path"] == file_info.filename:
-                            key = info_2["key"].encode()
+                            print(info_2)
+                            key = info_2.get("key", "").encode()
+                            if key == b"":
+                                output_zip.writestr(file_info.filename, file_data)
+                                break
                             decrypted_data = aes_cfb_decrypt(file_data, key, key[:16])
                             output_zip.writestr(file_info.filename, decrypted_data)
                             break
